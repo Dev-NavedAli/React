@@ -1,18 +1,14 @@
-import { useState } from 'react'
 import './App.css'
+import Card from './components/Card'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  const addValue = ()=>{
-    setCount(count+1)
-    setCount((prevCount)=>prevCount+1) // matlab setCount parameter bhi accept krta hai jisme count
-  }                                    //  ki last updated value jaayegi yhi ham setCount ko baar 
-  return (     // baar likhe tovo update 2 times me nhi hoga lekin prevCount se ho jaayega
+
+  return (
     <>
-      <h1>React Counter App</h1>
-      <p>Here the value is changed  {count}</p>
-      <button onClick={addValue}>Click {count}</button>
+       <h1 className='bg-green-500 p-4 text-white  rounded-lg'>Color</h1>
+       <Card  username="naved khan" btnText="Click Me"/>
+       <Card  username="noman khan"  />
     </>
   )
 }
